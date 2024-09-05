@@ -1,0 +1,20 @@
+server:
+  port: 8002
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/order_details
+    username: admin  
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+application:
+  config:
+    customer-url: http://localhost:8222/customer/api
+    payment-url: http://localhost:8222/payment/api
+    product-url: http://localhost:8222/product/api
+
+    

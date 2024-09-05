@@ -1,0 +1,22 @@
+server:
+  port: 8005
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/product_details
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    locations: classpath:/db/migration
+    baselineOnMigrate: true
+    enabled: true
+    user: admin
+    password: admin 
+
+    
+
